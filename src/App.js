@@ -35,10 +35,9 @@ class App extends Component {
   }
 
   deleteToDo(index) {
-    debugger
-    const todos = this.state.todos.slice();
-    const todo = todos[index];
-    this.setState({ todos: this.state.todos.filter(el => el !== index) })
+    const todoIndex = this.state.todos[index];
+    const todos = this.state.todos.filter((el , todoIndex) => todoIndex !== index);
+    this.setState({todos})
   }
 
   render() {
